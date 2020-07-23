@@ -30,6 +30,41 @@ Shiori is a simple bookmarks manager written in Go language. Intended as a simpl
 
 Original documentation is available in [wiki](https://github.com/RadhiFadlillah/shiori/wiki). If you think there are incomplete or incorrect information, feels free to edit it.
 
+### Raspberry Pi Building
+
+Shiori can be built for ARM/Raspberry Pi but not using the original wiki instructions to use `go get ...`, with go1.13.11 under Raspbian GNU/Linux 9 (stretch) get:
+
+    ../golang/src/github.com/go-shiori/shiori/internal/cmd/root.go:93:32: too many arguments in call to gap.NewScope
+            have (gap.ScopeType, string, string)
+            want (gap.ScopeType, string)
+    ../golang/src/github.com/go-shiori/shiori/internal/cmd/root.go:94:27: userScope.DataDir undefined (type *gap.Scope has no field or method DataDir)
+
+Original wiki documents minimum version of Go 1.12. So unclear why `go get ...` fails, the altnerative is to build from source.
+
+To build issue:
+
+    git clone https://github.com/go-shiori/shiori.git
+    cd shiori
+    go build  # NOTE this assumes GOPATH is set and go in the path, manual install of go described below
+ 
+ Quick setup of Go:
+ 
+    wget https://dl.google.com/go/go1.13.11.linux-armv6l.tar.gz
+    tar -ztvf go1.13.11.linux-armv6l.tar.gz
+    sudo tar -C /usr/local -xzf  go1.13.11.linux-armv6l.tar.gz
+    sudo apt-get remove golang-1.7
+    sudo apt autoremove
+
+Then in .profile (etc.)
+
+    PATH=$PATH:/usr/local/go/bin
+    GOPATH=$HOME/golang
+    if [ ! -d "$GOPATH/src" ] ; then
+        mkdir -p $GOPATH/src
+    fi
+
+Later versions should work, https://github.com/go-shiori/shiori/issues/243#issuecomment-624308622 indicates go1.14.1 works
+
 ## License
 
 Shiori is distributed using [MIT license](https://choosealicense.com/licenses/mit/), which means you can use and modify it however you want. However, if you make an enhancement for it, if possible, please send a pull request.
