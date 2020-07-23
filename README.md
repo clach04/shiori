@@ -6,9 +6,12 @@
 
 **As of 2020-06 Original upstream project https://github.com/go-shiori/shiori/ is now archived and looking for a new maintainer.** For more details, please see [#256](https://github.com/go-shiori/shiori/issues/256)
 
-An activively maintained fork (possibly incompatible database format) is available at https://github.com/techknowlogick/shiori - also see https://github.com/p3lim/shiori-web-ext/tree/patched for updated web browser extension.
+  * An activively maintained fork (possibly incompatible database format) is available at https://github.com/techknowlogick/shiori
+  * Also see https://github.com/emptyhua/shiori fork
 
-Also see https://github.com/emptyhua/shiori fork
+  * https://github.com/p3lim/shiori-web-ext/releases/latest updated web browser extension
+  * https://github.com/go-shiori/shiori-web-ext/releases/latest original
+ 
 
 Shiori is a simple bookmarks manager written in Go language. Intended as a simple clone of [Pocket](https://getpocket.com//). You can use it as command line application or as web application. This application is distributed as a single binary, which means it can be installed and used easily.
 
