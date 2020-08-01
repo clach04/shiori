@@ -44,7 +44,7 @@ Shiori can be built for ARM/Raspberry Pi but not using the original wiki instruc
             want (gap.ScopeType, string)
     ../golang/src/github.com/go-shiori/shiori/internal/cmd/root.go:94:27: userScope.DataDir undefined (type *gap.Scope has no field or method DataDir)
 
-Original wiki documents minimum version of Go 1.12. So unclear why `go get ...` fails, the altnerative is to build from source.
+Original wiki documents minimum version of Go 1.12. So unclear why `go get ...` fails, the alternative is to build from source.
 
 To build issue:
 
