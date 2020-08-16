@@ -4,7 +4,7 @@
 [![Docker Image](https://img.shields.io/static/v1?label=image&message=Docker&color=1488C6&logo=docker)](https://hub.docker.com/r/radhifadlillah/shiori)
 [![Deploy Heroku](https://img.shields.io/static/v1?label=deploy&message=Heroku&color=430098&logo=heroku)](https://heroku.com/deploy)
 
-**As of 2020-06 Original upstream project https://github.com/go-shiori/shiori/ is now archived and looking for a new maintainer.** For more details, please see [#256](https://github.com/go-shiori/shiori/issues/256)
+**As of 2020-08 Original upstream project https://github.com/go-shiori/shiori/ has a new maintainer.** For more details, please see [#256](https://github.com/go-shiori/shiori/issues/256)
 
   * Recently updated fork https://github.com/emptyhua/shiori
   * Allegedly maintained fork (possibly incompatible database format) is available at https://github.com/techknowlogick/shiori - note as of 2020-07 this version fails to archive sites
