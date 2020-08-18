@@ -1,0 +1,33 @@
+# See https://www.raspberrypi.org/documentation/linux/usage/systemd.md
+# Also see https://coreos.com/os/docs/latest/using-environment-variables-in-systemd-units.html
+#
+# Install
+#
+#   sudo cp systemd_shiori.service /etc/systemd/system/shiori.service
+#   sudo chmod 644 /etc/systemd/system/shiori.service
+#   sudo systemctl enable shiori.service
+#
+# Usage
+#
+#   sudo systemctl stop shiori.service
+#   sudo systemctl start shiori.service
+#   sudo systemctl restart shiori.service
+#   sudo systemctl status shiori.service  # status and recent logs
+
+[Unit]
+Description=shiori service
+After=network.target
+
+[Service]
+# EDIT HERE
+ExecStart=/home/pi/go/shiori/shiori serve
+WorkingDirectory=/home/pi/go/shiori
+User=pi
+
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+
