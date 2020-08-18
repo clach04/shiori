@@ -72,6 +72,8 @@ Then in .profile (etc.)
 
 Later versions should work, https://github.com/go-shiori/shiori/issues/243#issuecomment-624308622 indicates go1.14.1 works
 
+See systemd_shiori.service for running as a service under Raspberry Pi (Debian)
+
 ## License
 
 Shiori is distributed using [MIT license](https://choosealicense.com/licenses/mit/), which means you can use and modify it however you want. However, if you make an enhancement for it, if possible, please send a pull request.
