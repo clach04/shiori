@@ -1,5 +1,7 @@
 # docker build -t shiori .
-# docker run -d --rm --name shiori -p 8080:8080 -v $(pwd):/srv/shiori --restart=unless-stopped  shiori
+# docker run -d --rm --name shiori -p 8080:8080 -v $(pwd):/srv/shiori shiori
+# docker run -d --name shiori -p 8080:8080 -v $(pwd):/srv/shiori --restart=unless-stopped  shiori
+#  See https://serverfault.com/a/907154 clean and restart docker containers
 # docker stop shiori
 
 FROM golang:1.13-alpine as builder
